@@ -141,3 +141,80 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/** CUSTOM POST TYPES AND TAXONOMIES **/
+
+function create_agentposttype() {
+
+	register_post_type( 'agents',
+	// CPT Options
+		array(
+			'labels' => array(
+				'name' => __( 'Agents' ),
+				'singular_name' => __( 'Agent' )
+			),
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => array('slug' => 'agents'),
+		)
+	);
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_agentposttype' );
+
+
+function create_listingposttype() {
+
+	register_post_type( 'listings',
+	// CPT Options
+		array(
+			'labels' => array(
+				'name' => __( 'Listings' ),
+				'singular_name' => __( 'Listing' )
+			),
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => array('slug' => 'listings'),
+		)
+	);
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_listingposttype' );
+
+
+//hook into the init action and call create_book_taxonomies when it fires
+add_action( 'init', 'create_listing_type_taxonomy', 0 );
+
+//create a custom taxonomy name it topics for your posts
+
+function create_listing_type_taxonomy() {
+
+// Add new taxonomy, make it hierarchical like categories
+//first do the translations part for GUI
+
+  $labels = array(
+    'name' => _x( 'Listing Type', 'taxonomy general name' ),
+    'singular_name' => _x( 'Listing Type', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Listing Types' ),
+    'all_items' => __( 'All Listing Types' ),
+    'parent_item' => null,
+    'parent_item_colon' => null,
+    'edit_item' => __( 'Edit Listing Type' ),
+    'update_item' => __( 'Update Listing Type' ),
+    'add_new_item' => __( 'Add New Listing Type' ),
+    'new_item_name' => __( 'New Listing Type' ),
+    'menu_name' => __( 'Listing Types' ),
+  );
+
+// Now register the taxonomy
+
+  register_taxonomy('listing_types',array('listings'), array(
+    'hierarchical' => true,
+    'labels' => $labels,
+    'show_ui' => true,
+    'show_admin_column' => true,
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'listing-type' ),
+  ));
+
+}
