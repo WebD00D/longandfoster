@@ -20,7 +20,6 @@ Template Name: Home Page
   </div>
 
   <div class="homepage__about">
-
     <div class="fs-18 fc-light-blue">Long & Foster Halifax</div>
     <div class="fs-64 fc-dark-blue">Your Local Real Estate Team</div>
     <div class="bg-dark-red hz-separator"></div>
@@ -28,8 +27,37 @@ Template Name: Home Page
       <?php echo get_field('about_us_intro'); ?>
     </div>
     <a href="#" class="btn-lg">Learn More</a>
-
   </div>
+
+  <div class="homepage__featured">
+    <div class="container">
+      <div class="fs-34 fc-dark-blue t-center mb-60">Featured Listings</div>
+      <div class="listings">
+
+        <div class="listing">
+          <div class="listing__bg"></div>
+          <div class="listing__info fx-col">
+            <div class="fs-12 fc-light-blue">Listing Type</div>
+            <div class="fs-24 fc-dark-blue">607 Forest Ave</div>
+            <div class="fs-18 fc-dark-red">$650,000</div>
+            <div class="fx-row as-sb">
+              <span class="fs-14 fc-light-blue">2080 sq/ft</span>
+              <span>
+                <span class="fs-18 fc-dark-blue ml-5 mr-5"><img style="height:18px;" src="<?php echo get_template_directory_uri() ?>/images/bed.png" /> 3</span>
+                <span class="fs-18 fc-dark-blue ml-5 mr-5"><img style="height:18px;" src="<?php echo get_template_directory_uri() ?>/images/bath.png" /> 2.5</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+
 
 </div>
 

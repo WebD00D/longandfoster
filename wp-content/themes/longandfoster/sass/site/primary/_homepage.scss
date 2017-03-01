@@ -19,7 +19,7 @@
     background-color: #001548;
 
     .info-bar__container {
-      width: 900px;
+      width: 1100px;
       margin: auto;
       display: flex;
       align-items: center;
@@ -47,7 +47,7 @@
 
   &__about {
 
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -61,6 +61,18 @@
     .copy {
       width: 638px;
       text-align: center;
+    }
+
+  }
+
+  &__featured {
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #EBEDF1;
+
+    &__listings {
+
     }
 
   }

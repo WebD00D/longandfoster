@@ -11,3 +11,25 @@
 @import "primary/comments";
 
 @import "primary/homepage";
+@import "primary/listings";
+
+
+.container {
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 1100px;
+}
+
+.fx-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.as-sb {
+  justify-content: space-between;
+}
+
+.fx-col {
+  display: flex;
+  flex-direction: column;
+}

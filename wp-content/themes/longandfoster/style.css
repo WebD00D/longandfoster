@@ -44,6 +44,9 @@
 .fc-dark-blue {
   color: #001548;
 }
+.fc-dark-red {
+  color: #a40d2c;
+}
 .bg-dark-red {
   background-color: #a40d2c;
 }
@@ -51,8 +54,20 @@
   line-height: 32px;
   font-weight: 300;
 }
+.fs-12 {
+  font-size: 12px;
+}
+.fs-14 {
+  font-size: 14px;
+}
 .fs-18 {
   font-size: 18px;
+}
+.fs-24 {
+  font-size: 24px;
+}
+.fs-34 {
+  font-size: 34px;
 }
 .fs-64 {
   font-size: 64px;
@@ -60,6 +75,18 @@
 .hz-separator {
   width: 70px;
   height: 4px;
+}
+.mb-60 {
+  margin-bottom: 60px;
+}
+.ml-5 {
+  margin-left: 5px;
+}
+.mr-5 {
+  margin-right: 5px;
+}
+.t-center {
+  text-align: center;
 }
 /*--------------------------------------------------------------
  # Normalize
@@ -486,7 +513,7 @@ textarea {
   background-color: #001548;
 }
 .homepage__info-bar .info-bar__container {
-  width: 900px;
+  width: 1100px;
   margin: auto;
   display: flex;
   align-items: center;
@@ -504,7 +531,7 @@ textarea {
   background-color: rgba(255, 255, 255, 0.5);
 }
 .homepage__about {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -517,6 +544,53 @@ textarea {
 .homepage__about .copy {
   width: 638px;
   text-align: center;
+}
+.homepage__featured {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #ebedf1;
+}
+.listing {
+  height: 320px;
+  width: 320px;
+  border-radius: 4px;
+  background-color: white;
+  transition: 0.2s ease;
+}
+.listing:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+  -webkit-box-shadow: 2px 9px 53px -5px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 2px 9px 53px -5px rgba(0, 0, 0, 0.43);
+  box-shadow: 2px 9px 53px -5px rgba(0, 0, 0, 0.43);
+}
+.listing__bg {
+  height: 175px;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  background-color: #808080;
+}
+.listing__info {
+  height: 145px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 1100px;
+}
+.fx-row {
+  display: flex;
+  flex-direction: row;
+}
+.as-sb {
+  justify-content: space-between;
+}
+.fx-col {
+  display: flex;
+  flex-direction: column;
 }
 /*--------------------------------------------------------------
  # Infinite scroll
