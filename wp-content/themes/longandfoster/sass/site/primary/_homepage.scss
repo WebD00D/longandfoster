@@ -1,0 +1,72 @@
+.homepage {
+  padding-top: 96px;
+
+  &__hero {
+    height: 560px;
+
+    background-image: url('./images/house_hero.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  &__info-bar {
+
+    display: flex;
+
+    height: 128px;
+
+    background-color: #001548;
+
+    .info-bar__container {
+      width: 900px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      font-size: 18px;
+      color: white;
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+
+    }
+
+    .separator {
+      height: 50px;
+      width: 2px;
+
+      background-color: rgba(255,255,255,0.5);
+    }
+
+  }
+
+
+  &__about {
+
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+
+    .copy {
+      width: 638px;
+      text-align: center;
+    }
+
+  }
+
+
+
+
+
+}

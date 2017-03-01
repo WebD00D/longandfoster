@@ -38,6 +38,29 @@
  ## Captions
  ## Galleries
  --------------------------------------------------------------*/
+.fc-light-blue {
+  color: #7f8aa3;
+}
+.fc-dark-blue {
+  color: #001548;
+}
+.bg-dark-red {
+  background-color: #a40d2c;
+}
+.copy {
+  line-height: 32px;
+  font-weight: 300;
+}
+.fs-18 {
+  font-size: 18px;
+}
+.fs-64 {
+  font-size: 64px;
+}
+.hz-separator {
+  width: 70px;
+  height: 4px;
+}
 /*--------------------------------------------------------------
  # Normalize
  --------------------------------------------------------------*/
@@ -328,6 +351,16 @@ textarea {
 /*--------------------------------------------------------------
  # Navigation
  --------------------------------------------------------------*/
+.btn-lg {
+  width: 208px;
+  height: 64px;
+  line-height: 64px;
+  color: #a40d2c;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #a40d2c;
+  border-radius: 4px;
+}
 /*--------------------------------------------------------------
  # Accessibility
  --------------------------------------------------------------*/
@@ -437,6 +470,54 @@ textarea {
 .bypostauthor {
   display: block;
 }
+.homepage {
+  padding-top: 96px;
+}
+.homepage__hero {
+  height: 560px;
+  background-image: url('./images/house_hero.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.homepage__info-bar {
+  display: flex;
+  height: 128px;
+  background-color: #001548;
+}
+.homepage__info-bar .info-bar__container {
+  width: 900px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 18px;
+  color: white;
+}
+.homepage__info-bar .info-bar__container a {
+  color: white;
+  text-decoration: none;
+}
+.homepage__info-bar .separator {
+  height: 50px;
+  width: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.homepage__about {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.homepage__about .copy {
+  width: 638px;
+  text-align: center;
+}
 /*--------------------------------------------------------------
  # Infinite scroll
  --------------------------------------------------------------*/
@@ -521,6 +602,7 @@ embed, iframe, object {
   display: block;
 }
 .navbar {
+  position: absolute;
   height: 96px;
   width: 100%;
   display: flex;
