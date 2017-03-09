@@ -379,13 +379,28 @@ textarea {
  # Navigation
  --------------------------------------------------------------*/
 .btn-lg {
-  width: 208px;
   height: 64px;
+  padding-left: 50px;
+  padding-right: 50px;
   line-height: 64px;
   color: #a40d2c;
   text-decoration: none;
   text-align: center;
+  text-transform: uppercase;
   border: 1px solid #a40d2c;
+  border-radius: 4px;
+}
+.btn-sm {
+  height: 48px;
+  padding-left: 30px;
+  padding-right: 30px;
+  line-height: 48px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid #a40d2c;
+  background-color: #a40d2c;
   border-radius: 4px;
 }
 /*--------------------------------------------------------------
@@ -550,9 +565,28 @@ textarea {
   padding-bottom: 50px;
   background-color: #ebedf1;
 }
+.homepage__your-home {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.homepage__your-home .copy {
+  width: 638px;
+  text-align: center;
+}
+.listings {
+  display: flex;
+  justify-content: space-around;
+}
 .listing {
   height: 320px;
-  width: 320px;
+  width: 30%;
   border-radius: 4px;
   background-color: white;
   transition: 0.2s ease;
@@ -568,7 +602,7 @@ textarea {
   height: 175px;
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
-  background-color: #808080;
+  background-color: #ccc;
 }
 .listing__info {
   height: 145px;
@@ -579,7 +613,7 @@ textarea {
 .container {
   margin: 0 auto;
   max-width: 1100px;
-  width: 1100px;
+  width: 87.5%;
 }
 .fx-row {
   display: flex;
@@ -591,6 +625,12 @@ textarea {
 .fx-col {
   display: flex;
   flex-direction: column;
+}
+.fx-center {
+  justify-content: center;
+}
+.pt-50 {
+  padding-top: 50px;
 }
 /*--------------------------------------------------------------
  # Infinite scroll

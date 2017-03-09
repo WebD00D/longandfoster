@@ -50,11 +50,55 @@ Template Name: Home Page
           </div>
         </div>
 
+        <div class="listing">
+          <div class="listing__bg"></div>
+          <div class="listing__info fx-col">
+            <div class="fs-12 fc-light-blue">Listing Type</div>
+            <div class="fs-24 fc-dark-blue">607 Forest Ave</div>
+            <div class="fs-18 fc-dark-red">$650,000</div>
+            <div class="fx-row as-sb">
+              <span class="fs-14 fc-light-blue">2080 sq/ft</span>
+              <span>
+                <span class="fs-18 fc-dark-blue ml-5 mr-5"><img style="height:18px;" src="<?php echo get_template_directory_uri() ?>/images/bed.png" /> 3</span>
+                <span class="fs-18 fc-dark-blue ml-5 mr-5"><img style="height:18px;" src="<?php echo get_template_directory_uri() ?>/images/bath.png" /> 2.5</span>
+              </span>
+            </div>
+          </div>
+        </div>
 
+        <div class="listing">
+          <div class="listing__bg"></div>
+          <div class="listing__info fx-col">
+            <div class="fs-12 fc-light-blue">Listing Type</div>
+            <div class="fs-24 fc-dark-blue">607 Forest Ave</div>
+            <div class="fs-18 fc-dark-red">$650,000</div>
+            <div class="fx-row as-sb">
+              <span class="fs-14 fc-light-blue">2080 sq/ft</span>
+              <span>
+                <span class="fs-18 fc-dark-blue ml-5 mr-5"><img style="height:18px;" src="<?php echo get_template_directory_uri() ?>/images/bed.png" /> 3</span>
+                <span class="fs-18 fc-dark-blue ml-5 mr-5"><img style="height:18px;" src="<?php echo get_template_directory_uri() ?>/images/bath.png" /> 2.5</span>
+              </span>
+            </div>
+          </div>
+        </div>
 
       </div>
 
+      <div class="fx-row fx-center pt-50">
+        <a href="#" class="btn-lg">See all Listings</a>
+      </div>
+
     </div>
+  </div>
+
+  <div class="homepage__your-home">
+    <div class="fs-18 fc-light-blue">Your Home</div>
+    <div class="fs-64 fc-dark-blue">Selling With Us</div>
+    <div class="bg-dark-red hz-separator"></div>
+    <div class="copy fc-dark-blue fs-18">
+      <?php echo get_field('selling_with_us'); ?>
+    </div>
+    <a href="#" class="btn-sm">Learn More</a>
   </div>
 
 
