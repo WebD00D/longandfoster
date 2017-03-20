@@ -34,54 +34,56 @@ Template Name: Home Page
       <div class="fs-34 fc-dark-blue t-center mb-60">Featured Listings</div>
       <div class="listings">
 
-        <div class="listing">
-          <div class="listing__bg"></div>
-          <div class="listing__info fx-col">
-            <div class="fs-12 fc-light-blue">Listing Type</div>
-            <div class="fs-24 fc-dark-blue">607 Forest Ave</div>
-            <div class="fs-18 fc-dark-red">$650,000</div>
-            <div class="fx-row as-sb">
-              <span class="fs-14 fc-light-blue">2080 sq/ft</span>
-              <span>
-                <span class="fs-18 fc-dark-blue ml-5 mr-5"><img style="height:18px;" src="<?php echo get_template_directory_uri() ?>/images/bed.png" /> 3</span>
-                <span class="fs-18 fc-dark-blue ml-5 mr-5"><img style="height:18px;" src="<?php echo get_template_directory_uri() ?>/images/bath.png" /> 2.5</span>
-              </span>
-            </div>
-          </div>
-        </div>
 
-        <div class="listing">
-          <div class="listing__bg"></div>
-          <div class="listing__info fx-col">
-            <div class="fs-12 fc-light-blue">Listing Type</div>
-            <div class="fs-24 fc-dark-blue">607 Forest Ave</div>
-            <div class="fs-18 fc-dark-red">$650,000</div>
-            <div class="fx-row as-sb">
-              <span class="fs-14 fc-light-blue">2080 sq/ft</span>
-              <span>
-                <span class="fs-18 fc-dark-blue ml-5 mr-5"><img style="height:18px;" src="<?php echo get_template_directory_uri() ?>/images/bed.png" /> 3</span>
-                <span class="fs-18 fc-dark-blue ml-5 mr-5"><img style="height:18px;" src="<?php echo get_template_directory_uri() ?>/images/bath.png" /> 2.5</span>
-              </span>
-            </div>
-          </div>
-        </div>
+        <?php
+            // check if the repeater field has rows of data
+            if( have_rows('featured_properties') ):
 
-        <div class="listing">
-          <div class="listing__bg"></div>
-          <div class="listing__info fx-col">
-            <div class="fs-12 fc-light-blue">Listing Type</div>
-            <div class="fs-24 fc-dark-blue">607 Forest Ave</div>
-            <div class="fs-18 fc-dark-red">$650,000</div>
-            <div class="fx-row as-sb">
-              <span class="fs-14 fc-light-blue">2080 sq/ft</span>
-              <span>
-                <span class="fs-18 fc-dark-blue ml-5 mr-5"><img style="height:18px;" src="<?php echo get_template_directory_uri() ?>/images/bed.png" /> 3</span>
-                <span class="fs-18 fc-dark-blue ml-5 mr-5"><img style="height:18px;" src="<?php echo get_template_directory_uri() ?>/images/bath.png" /> 2.5</span>
-              </span>
-            </div>
-          </div>
-        </div>
+             	// loop through the rows of data
+                while ( have_rows('featured_properties') ) : the_row(); ?>
 
+                <?php
+                $postobject = get_sub_field('listing');
+                $url = get_permalink($postobject->ID);
+                $title = $postobject->post_title;
+                $featured_image = get_field('featured_image', $postobject->ID);
+                $price = get_field('price', $postobject->ID);
+                $listing_type = get_field('type_of_listing', $postobject->ID);
+                $bedrooms = get_field('bedrooms', $postobject->ID);
+                $bathrooms = get_field('bathrooms', $postobject->ID);
+                $square_footage = get_field('square_footage', $postobject->ID);
+
+
+
+                ?>
+
+
+                <a href="<?php echo $url; ?>" class="listing">
+                  <div class="listing__bg" style="background-image:url(<?php echo $featured_image; ?>);background-position:center;background-size:cover"></div>
+                  <div class="listing__info fx-col">
+                    <div class="fs-12 fc-light-blue"><?php echo $listing_type->name; ?></div>
+                    <div class="fs-16 fc-dark-blue"><?php echo $title; ?></div>
+                    <div class="fs-18 fc-dark-red">$<?php echo number_format($price); ?></div>
+                    <div class="fx-row as-sb">
+                      <span class="fs-14 fc-light-blue"><?php echo $square_footage; ?> sq/ft</span>
+                      <span>
+                        <span class="fs-16 fc-dark-blue ml-5 mr-5"><img style="height:14px;" src="<?php echo get_template_directory_uri() ?>/images/bed.png" /> <?php echo $bedrooms; ?></span>
+                        <span class="fs-16 fc-dark-blue ml-5 mr-5"><img style="height:14px;" src="<?php echo get_template_directory_uri() ?>/images/bath.png" /> <?php echo $bathrooms; ?></span>
+                      </span>
+                    </div>
+                  </div>
+                </a>
+
+
+            <?php  endwhile;
+
+            else :
+
+                // no rows found
+
+            endif;
+
+            ?>
       </div>
 
       <div class="fx-row fx-center pt-50">
