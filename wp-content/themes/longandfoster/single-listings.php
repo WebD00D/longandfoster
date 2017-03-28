@@ -31,10 +31,69 @@
 
 ?>
 
+<div class="single-listing">
+<div class="container fx fx-row mt-48 mb-60">
+  <div class="w-60 h-hero" style="background-image:url(<?php echo $featured_image ?>);background-size: cover; background-repeat:no-repeat;background-position: center"></div>
+  <div class="w-40 pl-40 pr-40">
+    <div class="ttu fc-light-blue f-12 ls-1">For Sale</div>
+    <div class="fs-28 fc-dark-red">$<?php echo number_format($price); ?></div>
+    <div class="fs-12 fc-light-blue mt-40"><?php echo $listing_type->name; ?></div>
+    <div class="fs-34 fc-dark-blue mt-0 mt-10 lh-40"><?php echo $address ?></div>
+    <div class="w-75 fx-row fx-wrap fx-justify-sb mt-40">
+      <div class="w-50 fx-col fx-align-start fx-justify-center">
+        <div class="fs-28 fc-dark-red"><?php echo $year_built; ?></div>
+        <div class="fc-light-blue f-14">Year Built</div>
+      </div>
+      <div class="w-50 fx-col fx-align-start fx-justify-center">
+        <div class="fs-28 fc-dark-red"><?php echo number_format($square_footage); ?></div>
+        <div class="fc-light-blue f-14">Square Feet</div>
+      </div>
+      <div class="w-50 fx-col fx-align-start fx-justify-center mt-20">
+        <div class="fs-28 fc-dark-red"><?php echo $bedrooms; ?></div>
+        <div class="fc-light-blue f-14">Bedrooms</div>
+      </div>
+      <div class="w-50 fx-col fx-align-start fx-justify-center mt-20">
+        <div class="fs-28 fc-dark-red"><?php echo $bathrooms; ?></div>
+        <div class="fc-light-blue f-14">Bathrooms</div>
+      </div>
+    </div>
+    <div class="fx-row fx-align-center fx-justify-start mt-40">
+      <a href="#" class="t-nodec"><div class="fx-col fx-align-center fx-justify-center mr-16">
+        <div><i class="fa fa-share-alt fc-grey"></i></div>
+        <div class="fs-14 fc-dark-red"><b>Share</b></div>
+      </div></a>
+      <a href="#" class="t-nodec"><div class="fx-col fx-align-center fx-justify-center ml-16">
+        <div><i class="fa fa-print fc-grey"></i></div>
+        <div class="fs-14 fc-dark-red"><b>Print</b></div>
+      </div></a>
+    </div>
+  </div>
+  </div>
+
+  <div class="container fx fx-row mt-50 mb-50">
+    <div class="w-60">
+      <div class="f-14 fc-light-blue mb-24">Listing Updated <?php the_modified_date( 'F j, Y g:i a' ); ?></div>
+      <div class="f-18 fc-dark-blue mb-8">Status: Active</div>
+      <div class="f-18 fc-dark-blue mb-8">MLS#: 59221</div>
+      <div class="f-18 fc-dark-blue mb-8">Type: Residential - Single Family</div>
+      <div class="f-18 fc-dark-blue mb-8">Style: Contemporary, 2 Story</div>
+      <div class="f-18 fc-dark-blue mb-8">Subdivision: None</div>
+      <div class="f-18 fc-dark-blue mb-24">County: Halifax</div>
+      <div class="f-18 fc-dark-blue">
+        <?php
+          $post = get_post($postID);
+          $content = apply_filters('the_content', $post->post_content);
+          echo $content;
+        ?>
+      </div>
+    </div>
+    <div class="w-40 pl-40 pr-40">
+      <?php the_modified_date( 'F j, Y g:i a' ); ?>
+    </div>
+  </div>
 
 
-
-
+</div>
 
 
 
