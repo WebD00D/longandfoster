@@ -27,29 +27,47 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'longandfoster' ); ?></a>
 
-
-
 	<nav class="navbar">
-		<div class="navbar__container">
+		<div class="w-100 fx fx-justify-sb ml-48 mr-48 ml-16-m mr-16-m">
 
 			<div class="logo__container">
 				<a class="logo"><img src="<?php echo get_template_directory_uri() ?>/images/Logo@2x.png"></a>
 			</div>
 
-			<div class="navbar__page-links">
+			<div class="navbar__page-links d-none-m">
 				<a href="#">About</a>
 				<a href="#">Agents</a>
 				<a href="#">Listing</a>
 				<a href="#">Community</a>
 			</div>
 
-			<div class="navbar__contact">
+			<div class="navbar__contact d-none-m">
 				<a href="#">Contact</a>
+			</div>
+
+			<div class="d-none-dt fx fx-align-center">
+				<a href="#" id="js_mobile-menu-button"><img style="height:20px;" src="<?php echo get_template_directory_uri() ?>/images/mobile-menu.png" /></a>
 			</div>
 
 		</div>
 
 	</nav>
+
+
+	<div id="js_mobile-menu" class="fixed top-0 left-0 bottom-0 right-0 bg--white f pb-48 overflow-y-scroll d-none">
+		<div class="d-none-dt fx fx-align-center fx-justify-center ht-75 b bb b--light-grey" ><a id="js_mobile-close-button" href="#"><img style="height: 20px;" src="<?php echo get_template_directory_uri() ?>/images/mobile-close.png" /></a></div>
+		<a href="#" class="w-100 fx fx-justify-center fx-align-center ht-75 td-none fc-dark-blue">Home</a>
+		<div class="w-25p ht-2 bg-dark-red mlra"></div>
+		<a href="#" class="w-100 fx fx-justify-center fx-align-center ht-75 td-none fc-dark-blue">About</a>
+		<div class="w-25p ht-2 bg-dark-red mlra"></div>
+		<a href="#" class="w-100 fx fx-justify-center fx-align-center ht-75 td-none fc-dark-blue">Agents</a>
+		<div class="w-25p ht-2 bg-dark-red mlra"></div>
+		<a href="#" class="w-100 fx fx-justify-center fx-align-center ht-75 td-none fc-dark-blue">Listings</a>
+		<div class="w-25p ht-2 bg-dark-red mlra"></div>
+		<a href="#" class="w-100 fx fx-justify-center fx-align-center ht-75 td-none fc-dark-blue">Community</a>
+		<div class="w-25p ht-2 bg-dark-red mlra mb-24"></div>
+	  <a href="/" class="logo fx fx-align-center fx-justify-center ht-75"><img style="height:25px;" src="<?php echo get_template_directory_uri() ?>/images/Logo@2x.png"></a>
+	</div>
 
 
 	<div id="content" class="site-content">

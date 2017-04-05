@@ -5,6 +5,36 @@
  * navigation support for dropdown menus.
  */
 ( function() {
+
+	function toggleClass(element, className){
+	    if (!element || !className){
+	        return;
+	    }
+
+	    var classString = element.className, nameIndex = classString.indexOf(className);
+	    if (nameIndex == -1) {
+	        classString += ' ' + className;
+	    }
+	    else {
+	        classString = classString.substr(0, nameIndex) + classString.substr(nameIndex+className.length);
+	    }
+	    element.className = classString;
+	}
+
+	var mobileNavButton = document.getElementById('js_mobile-menu-button');
+	var mobileCloseButton = document.getElementById('js_mobile-close-button');
+	var mobileMenu = document.getElementById("js_mobile-menu");
+
+	mobileNavButton.onclick = function(){ toggleClass(mobileMenu, 'd-none'); }
+	mobileCloseButton.onclick = function(){ toggleClass(mobileMenu, 'd-none'); }
+
+
+
+
+
+
+
+
 	var container, button, menu, links, i, len;
 
 	container = document.getElementById( 'site-navigation' );
