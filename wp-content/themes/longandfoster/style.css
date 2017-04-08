@@ -81,6 +81,38 @@
 .fs-64 {
   font-size: 64px;
 }
+@media (max-width: 992px) {
+  .fs-12-m {
+    font-size: 12px;
+  }
+  .fs-14-m {
+    font-size: 14px;
+  }
+  .fs-16-m {
+    font-size: 16px;
+  }
+  .fs-18-m {
+    font-size: 18px;
+  }
+  .fs-24-m {
+    font-size: 24px;
+  }
+  .fs-28-m {
+    font-size: 28px;
+  }
+  .fs-34-m {
+    font-size: 34px;
+  }
+  .fs-40-m {
+    font-size: 40px;
+  }
+  .fs-64-m {
+    font-size: 64px;
+  }
+  .lh-44-m {
+    line-height: 44px;
+  }
+}
 .hz-separator {
   width: 70px;
   height: 4px;
@@ -535,10 +567,20 @@ textarea {
   background-position: center center;
   background-repeat: no-repeat;
 }
+@media (max-width: 720px) {
+  .homepage__hero {
+    height: 320px;
+  }
+}
 .homepage__info-bar {
   display: flex;
   height: 128px;
   background-color: #001548;
+}
+@media (max-width: 720px) {
+  .homepage__info-bar {
+    height: 240px;
+  }
 }
 .homepage__info-bar .info-bar__container {
   width: 1100px;
@@ -549,14 +591,34 @@ textarea {
   font-size: 18px;
   color: white;
 }
+@media (max-width: 720px) {
+  .homepage__info-bar .info-bar__container {
+    flex-direction: column;
+    font-size: 14px;
+    text-align: center;
+  }
+  .homepage__info-bar .info-bar__container div {
+    margin-bottom: 16px;
+  }
+}
 .homepage__info-bar .info-bar__container a {
   color: white;
   text-decoration: none;
+}
+@media (max-width: 720px) {
+  .homepage__info-bar .info-bar__container .phone_number {
+    font-size: 28px;
+  }
 }
 .homepage__info-bar .separator {
   height: 50px;
   width: 2px;
   background-color: rgba(255, 255, 255, 0.5);
+}
+@media (max-width: 720px) {
+  .homepage__info-bar .separator {
+    display: none;
+  }
 }
 .homepage__about {
   max-width: 1100px;
@@ -572,6 +634,13 @@ textarea {
 .homepage__about .copy {
   width: 638px;
   text-align: center;
+}
+@media (max-width: 992px) {
+  .homepage__about .copy {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .homepage__featured {
   padding-top: 50px;
@@ -1382,6 +1451,11 @@ textarea {
   -webkit-box-shadow: -1px 6px 23px -7px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: -1px 6px 23px -7px rgba(0, 0, 0, 0.6);
   box-shadow: -1px 6px 23px -7px rgba(0, 0, 0, 0.6);
+}
+@media (min-width: 993px) {
+  .mobile-break {
+    display: none;
+  }
 }
 .overflow-y-scroll {
   overflow-y: scroll;

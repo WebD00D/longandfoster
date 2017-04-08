@@ -56,6 +56,8 @@
   .d-none-m { display: none !important; }
 }
 
+
+
 @media (min-width: 962px) {
   .d-none-dt { display: none !important; }
 }
@@ -370,6 +372,13 @@
   -webkit-box-shadow: -1px 6px 23px -7px rgba(0,0,0,0.6);
   -moz-box-shadow: -1px 6px 23px -7px rgba(0,0,0,0.6);
   box-shadow: -1px 6px 23px -7px rgba(0,0,0,0.6);
+}
+
+// Breaks
+@media (min-width: 993px) {
+  .mobile-break {
+    display: none;
+  }
 }
 
 
