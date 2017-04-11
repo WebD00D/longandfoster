@@ -66,7 +66,7 @@ Template Name: Home Page
                     <div class="fs-18 fc-dark-red">$<?php echo number_format($price); ?></div>
                     <div class="fx-row as-sb">
                       <span class="fs-14 fc-light-blue"><?php echo $square_footage; ?> sq/ft</span>
-                      <span>
+                      <span class="fx">
                         <span class="fs-16 fc-dark-blue ml-5 mr-5"><img style="height:14px;" src="<?php echo get_template_directory_uri() ?>/images/bed.png" /> <?php echo $bedrooms; ?></span>
                         <span class="fs-16 fc-dark-blue ml-5 mr-5"><img style="height:14px;" src="<?php echo get_template_directory_uri() ?>/images/bath.png" /> <?php echo $bathrooms; ?></span>
                       </span>
@@ -95,9 +95,9 @@ Template Name: Home Page
 
   <div class="homepage__your-home">
     <div class="fs-18 fc-light-blue">Your Home</div>
-    <div class="fs-64 fc-dark-blue">Selling With Us</div>
+    <div class="fs-64 fs-40-m lh-44-m mb-16-m fc-dark-blue">Selling With Us</div>
     <div class="bg-dark-red hz-separator"></div>
-    <div class="copy fc-dark-blue fs-18">
+    <div class="copy fc-dark-blue fs-18 mw-84">
       <?php echo get_field('selling_with_us'); ?>
     </div>
     <a href="#" class="btn-sm">Learn More</a>
@@ -108,3 +108,39 @@ Template Name: Home Page
 </div>
 
 <?php get_footer(); ?>
+
+<script>
+
+$(document).ready(function(){
+  $('.listings').slick({
+    arrows: false,
+    dots: true,
+    autoplay: true,
+    autoPlaySpeed: 5000,
+    slidesToShow: 3,
+    responsive: [
+    {
+      breakpoint: 900,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 700,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1,
+        centerMode: false,
+      }
+    },
+
+  ],
+  });
+});
+
+</script>

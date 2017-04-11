@@ -47,8 +47,14 @@
 .fc-dark-red {
   color: #a40d2c;
 }
+.fc-white {
+  color: #fff;
+}
 .bg-dark-red {
   background-color: #a40d2c;
+}
+.bg-light-grey {
+  background-color: #ebedf1;
 }
 .fc-grey {
   color: #ccc;
@@ -558,7 +564,6 @@ textarea {
 }
 .homepage {
   font-family: 'Noto Sans', sans-serif;
-  padding-top: 96px;
 }
 .homepage__hero {
   height: 560px;
@@ -566,6 +571,7 @@ textarea {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 @media (max-width: 720px) {
   .homepage__hero {
@@ -662,9 +668,14 @@ textarea {
   width: 638px;
   text-align: center;
 }
-.listings {
-  display: flex;
-  justify-content: space-around;
+@media (max-width: 900px) {
+  .homepage__your-home .copy {
+    width: 100%;
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+  }
 }
 .listing {
   height: 320px;
@@ -676,10 +687,14 @@ textarea {
 }
 .listing:hover {
   cursor: pointer;
-  transform: scale(1.01);
-  -webkit-box-shadow: 2px 9px 53px -5px rgba(0, 0, 0, 0.43);
-  -moz-box-shadow: 2px 9px 53px -5px rgba(0, 0, 0, 0.43);
-  box-shadow: 2px 9px 53px -5px rgba(0, 0, 0, 0.43);
+  -webkit-box-shadow: -1px 2px 11px -2px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: -1px 2px 11px -2px rgba(0, 0, 0, 0.57);
+  box-shadow: -1px 2px 11px -2px rgba(0, 0, 0, 0.57);
+}
+@media (min-width: 900px) {
+  .listing:hover {
+    transform: scale(1.01);
+  }
 }
 .listing__bg {
   height: 175px;
@@ -694,7 +709,6 @@ textarea {
   padding: 15px;
 }
 .single-listing {
-  padding-top: 96px;
   font-family: 'Noto Sans', sans-serif;
 }
 .dev {
@@ -722,6 +736,11 @@ textarea {
 }
 .pt-50 {
   padding-top: 50px;
+}
+@media (max-width: 900px) {
+  .fxd-column-m {
+    flex-direction: column;
+  }
 }
 .db {
   display: block;
@@ -777,6 +796,11 @@ textarea {
 }
 .fx-wrap {
   flex-wrap: wrap;
+}
+@media (max-width: 900px) {
+  .fx-justify-start-m {
+    justify-content: flex-start;
+  }
 }
 @media (max-width: 468px) {
   .fx-row--sm {
@@ -842,6 +866,9 @@ textarea {
 .z-neg {
   z-index: -1;
 }
+.mw-75 {
+  width: 75%;
+}
 .mw-85 {
   width: 85%;
 }
@@ -853,6 +880,9 @@ textarea {
 }
 .w-30 {
   width: 30%;
+}
+.w-33 {
+  width: 33%;
 }
 .w-40 {
   width: 40%;
@@ -881,6 +911,9 @@ textarea {
 .w-25p {
   width: 25px;
 }
+.w-150p {
+  width: 150px;
+}
 .h-100 {
   height: 100%;
 }
@@ -907,8 +940,16 @@ textarea {
     width: 50%;
   }
 }
+@media (max-width: 900px) {
+  .w-100m {
+    width: 100%;
+  }
+}
 .ht-2 {
   height: 2px;
+}
+.ht-48 {
+  height: 48px;
 }
 .ht-75 {
   height: 75px;
@@ -1056,6 +1097,33 @@ textarea {
 .ph-32 {
   padding-left: 32px;
   padding-right: 32px;
+}
+.pl-16 {
+  padding-left: 16px;
+}
+.pl-20 {
+  padding-left: 20px;
+}
+.pl-24 {
+  padding-left: 24px;
+}
+.pl-28 {
+  padding-left: 28px;
+}
+.pl-32 {
+  padding-left: 32px;
+}
+.pl-36 {
+  padding-left: 36px;
+}
+.pl-40 {
+  padding-left: 40px;
+}
+.pl-44 {
+  padding-left: 44px;
+}
+.pl-48 {
+  padding-left: 48px;
 }
 @media (max-width: 600px) {
   .ph-32-m {
@@ -1403,6 +1471,11 @@ textarea {
     margin-right: 48px;
   }
 }
+@media (max-width: 900px) {
+  .mt-24-sm {
+    margin-top: 24px;
+  }
+}
 @media (max-width: 992px) {
   .ma-none-m {
     margin: 0px;
@@ -1452,6 +1525,9 @@ textarea {
   -moz-box-shadow: -1px 6px 23px -7px rgba(0, 0, 0, 0.6);
   box-shadow: -1px 6px 23px -7px rgba(0, 0, 0, 0.6);
 }
+.br-50p {
+  border-radius: 50px;
+}
 @media (min-width: 993px) {
   .mobile-break {
     display: none;
@@ -1459,6 +1535,49 @@ textarea {
 }
 .overflow-y-scroll {
   overflow-y: scroll;
+}
+.c-pointer:hover {
+  cursor: pointer;
+}
+.slick-dots {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  bottom: -60px;
+  justify-content: center;
+  margin-left: 0px;
+  list-style: none;
+  left: calc(50% - 50px);
+  padding-left: 0px;
+}
+.slick-dots li button {
+  border: 1px solid #7f8aa3;
+  background-color: #7f8aa3;
+  border-radius: 100%;
+  width: 10px;
+  color: transparent;
+  line-height: 0px;
+  padding: 0px;
+  height: 10px;
+  margin: 5px;
+}
+.slick-dots li button:active, .slick-dots li button:focus {
+  outline: 0;
+}
+.slick-dots .slick-active button {
+  border: 1px solid #001548 !important;
+  background-color: #001548 !important;
+}
+.slick-slide {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.slick-slide:active, .slick-slide:focus {
+  outline: 0;
+}
+.slick-list {
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 /*--------------------------------------------------------------
  # Infinite scroll

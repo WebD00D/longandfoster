@@ -18,6 +18,10 @@
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
 
 <script src="https://use.fontawesome.com/f9a957d2bf.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+
+
+
 
 
 <?php wp_head(); ?>
@@ -31,13 +35,13 @@
 		<div class="w-100 fx fx-justify-sb ml-48 mr-48 ml-16-m mr-16-m">
 
 			<div class="logo__container">
-				<a class="logo"><img src="<?php echo get_template_directory_uri() ?>/images/Logo@2x.png"></a>
+				<a href="/" class="logo"><img src="<?php echo get_template_directory_uri() ?>/images/Logo@2x.png" /></a>
 			</div>
 
 			<div class="navbar__page-links d-none-m">
 				<a href="#">About</a>
 				<a href="#">Agents</a>
-				<a href="#">Listing</a>
+				<a href="/listings">Listings</a>
 				<a href="#">Community</a>
 			</div>
 
@@ -70,4 +74,4 @@
 	</div>
 
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content" style="padding-top: 96px;">
