@@ -58,11 +58,8 @@ Template Name: Listings Page
 
 <div class="w-100 bg-light-grey pt-48 pb-48 ">
   <div class="mw-75 mlra fx fx-justify-start fx-wrap container">
-    <?php echo $test; ?>
-    <?php
 
-    if( $posts ): ?>
-
+    <?php if ( $posts ): ?>
 	   <?php foreach( $posts as $post ):
 		    setup_postdata( $post );
         $url = get_permalink($post->ID);

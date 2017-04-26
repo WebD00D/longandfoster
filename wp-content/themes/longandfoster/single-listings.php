@@ -32,9 +32,9 @@
 ?>
 
 <div class="single-listing">
-<div class="container fx fx-row mt-48 mb-60">
-  <div class="w-60 h-hero" style="background-image:url(<?php echo $featured_image ?>);background-size: cover; background-repeat:no-repeat;background-position: center"></div>
-  <div class="w-40 pl-40 pr-40">
+<div class="container fx fx-row fx-col-m mt-48 mb-60">
+  <div class="w-60 w-100m h-hero" style="background-image:url(<?php echo $featured_image ?>);background-size: cover; background-repeat:no-repeat;background-position: center"></div>
+  <div class="w-40 w-100m pl-40 pl-0m pr-40 mt-24m">
     <div class="ttu fc-light-blue f-12 ls-1">For Sale</div>
     <div class="fs-24 fc-dark-red">$<?php echo number_format($price); ?></div>
     <div class="fs-12 fc-light-blue mt-20"><?php echo $listing_type->name; ?></div>
@@ -70,15 +70,79 @@
   </div>
   </div>
 
-  <div class="container fx fx-row mt-50 mb-50">
-    <div class="w-60">
-      <div class="f-14 fc-light-blue mb-24">Listing Updated <?php the_modified_date( 'F j, Y g:i a' ); ?></div>
+  <div class="container fx fx-row fx-col-m mt-48 mb-48">
+    <div class="w-60 w-100m">
+      <div class="f-14 fc-light-blue mb-24 d-nonem">Listing Updated <?php the_modified_date( 'F j, Y g:i a' ); ?></div>
       <div class="f-18 fc-dark-blue mb-8">Status: Active</div>
       <div class="f-18 fc-dark-blue mb-8">MLS#: 59221</div>
       <div class="f-18 fc-dark-blue mb-8">Type: Residential - Single Family</div>
       <div class="f-18 fc-dark-blue mb-8">Style: Contemporary, 2 Story</div>
       <div class="f-18 fc-dark-blue mb-8">Subdivision: None</div>
       <div class="f-18 fc-dark-blue mb-24">County: Halifax</div>
+
+    </div>
+    <div class="w-40 w-100m pl-40 pl-0m pr-40">
+      { Real Estate Agent Area }
+    </div>
+  </div>
+
+  <div class="container fx fx-row fx-col-m mt-48 mb-48">
+
+    <div class="w-50 w-100m">
+      <div class="fs-24 fc-dark-red">Highlights</div>
+
+      <div class="w-50 w-100m">
+        <?php
+          if( have_rows('appliance_highlights') ): ?>
+              <div class="f-20 fc-dark-blue mb-16 mt-24">Appliances</div>
+          <?php
+              while ( have_rows('appliance_highlights') ) : the_row(); ?>
+                  <div class="f-16 fc-dark-blue mb-4"><?php echo the_sub_field('highlight'); ?></div>
+          <?php  endwhile;
+          endif;
+          ?>
+      </div>
+
+      <div class="w-50 w-100m">
+        <?php
+          if( have_rows('interior_highlights') ): ?>
+              <div class="f-20 fc-dark-blue mb-16 mt-24">Interior</div>
+          <?php
+              while ( have_rows('interior_highlights') ) : the_row(); ?>
+                  <div class="f-16 fc-dark-blue mb-4"><?php echo the_sub_field('highlight'); ?></div>
+          <?php  endwhile;
+          endif;
+          ?>
+      </div>
+
+      <div class="w-50 w-100m">
+        <?php
+          if( have_rows('utility_highlights') ): ?>
+              <div class="f-20 fc-dark-blue mb-16 mt-24">Utilities</div>
+          <?php
+              while ( have_rows('utility_highlights') ) : the_row(); ?>
+                  <div class="f-16 fc-dark-blue mb-4"><?php echo the_sub_field('highlight'); ?></div>
+          <?php  endwhile;
+          endif;
+          ?>
+      </div>
+
+      <div class="w-50 w-100m">
+        <?php
+          if( have_rows('basement_highlights') ): ?>
+              <div class="f-20 fc-dark-blue mb-16 mt-24">Basement</div>
+          <?php
+              while ( have_rows('basement_highlights') ) : the_row(); ?>
+                  <div class="f-16 fc-dark-blue mb-4"><?php echo the_sub_field('highlight'); ?></div>
+          <?php  endwhile;
+          endif;
+          ?>
+      </div>
+
+
+    </div>
+
+    <div class="w-50 w-100m">
       <div class="f-18 fc-dark-blue">
         <?php
           $post = get_post($postID);
@@ -87,9 +151,12 @@
         ?>
       </div>
     </div>
-    <div class="w-40 pl-40 pr-40">
-      <?php the_modified_date( 'F j, Y g:i a' ); ?>
-    </div>
+
+  </div>
+
+
+  <div class="ht-120 bg-light-grey">
+    {About Halifax Section Goes Here}
   </div>
 
 
