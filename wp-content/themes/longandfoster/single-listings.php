@@ -33,12 +33,68 @@
 
 <div class="single-listing">
 <div class="container fx fx-row fx-col-m mt-48 mb-60">
-  <div class="w-60 w-100m h-hero" style="background-image:url(<?php echo $featured_image ?>);background-size: cover; background-repeat:no-repeat;background-position: center"></div>
+  <div class="w-60 w-100m"  >
+    <div class="w-100  h-hero" style="background-image:url(<?php echo $featured_image ?>);background-size: cover; background-repeat:no-repeat;background-position: center"></div>
+
+    <div class="fx fx-row mt-12 ">
+      <div class="w-100 ht-100 ht-70-m  fx fx-justify-sb pics">
+
+        <?php
+          if( have_rows('photos') ): ?>
+
+          <?php
+              $count = 1;
+              while ( have_rows('photos') ) : the_row(); ?>
+
+
+              <?php if ( $count > 5 ) { ?>
+
+                <!-- Any more photos after 4, we'll add a display none so it doesn't show up in the grid. -->
+                <a class="listing_img_thumb br-tl-3 br-tr-3" style="outline:none;display:none" href="<?php echo the_sub_field('photo'); ?>" data-fancybox="group"  data-caption="<?php echo the_sub_field('caption'); ?>">
+                   <div class="br-tl-3 br-tr-3 ht-100 ht-70-m w-100" style="background-image:url(<?php echo the_sub_field('photo'); ?>);background-size: cover; background-repeat:no-repeat;background-position: center" ></div>
+                </a>
+
+              <?php } ?>
+
+
+              <?php if ( $count <= 4 ) { ?>
+
+                <a class="listing_img_thumb br-tl-3 br-tr-3" style="outline:none" href="<?php echo the_sub_field('photo'); ?>" data-fancybox="group" data-caption="<?php echo the_sub_field('caption'); ?>">
+              	   <div class="br-tl-3 br-tr-3 ht-100 ht-70-m w-100" style="background-image:url(<?php echo the_sub_field('photo'); ?>);background-size: cover; background-repeat:no-repeat;background-position: center" ></div>
+                </a>
+
+              <?php } ?>
+
+              <?php if ( $count == 5 ) { ?>
+
+                <!-- The 'More' photo will get appeneded last. -->
+                <a class="listing_img_thumb br-tl-3 br-tr-3 relative" style="outline:none" href="<?php echo the_sub_field('photo'); ?>" data-fancybox="group" data-caption="<?php echo the_sub_field('caption'); ?>">
+                   <div class="br-tl-3 br-tr-3 ht-100 ht-70-m w-100" style="background-image:url(<?php echo the_sub_field('photo'); ?>);background-size: cover; background-repeat:no-repeat;background-position: center" >
+                     <div class="absolute more-pic-blue ht-100p ht-70-m w-100 br-tl-3 br-tr-3 fx fx-align-center fx-justify-center">
+                       <div class="fc-white f-14">More</div>
+                     </div>
+                   </div>
+                </a>
+
+              <?php } ?>
+
+
+          <?php $count++;  endwhile;
+          endif;
+          ?>
+
+      </div>
+
+    </div>
+
+
+  </div>
   <div class="w-40 w-100m pl-40 pl-0m pr-40 mt-24m">
     <div class="ttu fc-light-blue f-12 ls-1">For Sale</div>
     <div class="fs-24 fc-dark-red">$<?php echo number_format($price); ?></div>
     <div class="fs-12 fc-light-blue mt-20"><?php echo $listing_type->name; ?></div>
     <div class="fs-24 fc-dark-blue mt-0 mt-10"><?php echo $address ?></div>
+    <div class="f-14 fc-light-blue mb-24 d-nonem">Listing Updated <?php the_modified_date( 'F j, Y g:i a' ); ?></div>
     <div class="w-75 fx-row fx-wrap fx-justify-sb mt-20">
       <div class="w-50 fx-col fx-align-start fx-justify-center">
         <div class="fs-24 fc-dark-red"><?php echo $year_built; ?></div>
@@ -70,9 +126,9 @@
   </div>
   </div>
 
+
   <div class="container fx fx-row fx-col-m mt-48 mb-48">
-    <div class="w-60 w-100m">
-      <div class="f-14 fc-light-blue mb-24 d-nonem">Listing Updated <?php the_modified_date( 'F j, Y g:i a' ); ?></div>
+    <div class="w-50 w-100m">
       <div class="f-18 fc-dark-blue mb-8">Status: Active</div>
       <div class="f-18 fc-dark-blue mb-8">MLS#: 59221</div>
       <div class="f-18 fc-dark-blue mb-8">Type: Residential - Single Family</div>
@@ -81,12 +137,48 @@
       <div class="f-18 fc-dark-blue mb-24">County: Halifax</div>
 
     </div>
-    <div class="w-40 w-100m pl-40 pl-0m pr-40">
-      { Real Estate Agent Area }
+    <div class="w-50 w-100m pl-0m pr-0m  ">
+
+      <?php
+
+
+
+            $postobject = get_field('agent');
+            $url = get_permalink($postobject->ID);
+            $name = $postobject->post_title;
+            $featured_image = get_field('photo', $postobject->ID);
+            $title = get_field('title', $postobject->ID);
+            $content = apply_filters('the_content', $postobject->post_content); ?>
+
+
+
+
+      <div class="ht-300p w-100 fx fx-col-m  fx-justify-center fx-align-center">
+        <div class="w-40 w-100m pt-8 pb-8">
+          <img style="width: 100%; height: auto;max-height: 300px" src="<?php echo $featured_image; ?>" />
+        </div>
+        <div class="w-60 w-100m pl-16 pt-8 pb-8">
+          <div class="fs-12 fc-light-blue">Listed By</div>
+          <div class="fs-24 fc-dark-blue mt-0 mt-10 mb-12"><?php echo $name; ?></div>
+          <div class="f-16 fc-dark-blue mb-24">
+            3510 Old Halifax Road <Br />
+            South Boston, VA
+          </div>
+          <div class="bg-light-grey ht-48 fc-light-blue w-150p fx fx-align-center fx-justify-center br-50p">About</div>
+          <div class="fs-12 fc-light-blue mt-20">Contact</div>
+          <div class="fx w-100 ">
+            <div class="fs-12 fc-dark-red mr-12">804.555.5555</div>
+            <div class="fs-12 fc-dark-red">rva.christian91@gmail.com</div>
+          </div>
+
+        </div>
+      </div>
+
+
     </div>
   </div>
 
-  <div class="container fx fx-row fx-col-m mt-48 mb-48">
+  <div class="container fx fx-row fx-col-m mt-24 mb-48">
 
     <div class="w-50 w-100m">
       <div class="fs-24 fc-dark-red">Highlights</div>
@@ -161,8 +253,6 @@
 
 
 </div>
-
-
 
 
 <?php get_footer(); ?>
