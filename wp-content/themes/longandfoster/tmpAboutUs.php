@@ -56,8 +56,8 @@ Template Name: About Page
 
         <div class="pt-100 pb-100" style="background-color: <?php echo $bg; ?>">
           <div class="mw-75 m-auto fx fx-col-m">
-            <div class="w-30 w-100--md">
-              <image src="<?php echo $featured_image; ?>" />
+            <div class="w-30 w-100--md fx fx-justify-center fx-justify-start-m">
+              <image class="agent-image" src="<?php echo $featured_image; ?>" />
             </div>
             <div class="w-70 w-100--md pl-16 pl-0m pr-16 pt-12">
               <div class="fc-dark-blue f-24"><?php echo $name; ?></div>

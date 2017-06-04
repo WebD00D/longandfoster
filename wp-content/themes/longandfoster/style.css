@@ -979,8 +979,8 @@ textarea {
 .ht-120 {
   height: 120px;
 }
-.ht-250p {
-  height: 250px;
+.ht-300p {
+  height: 300px;
 }
 .ttu {
   text-transform: uppercase;
@@ -1341,6 +1341,12 @@ textarea {
 }
 .mt-48 {
   margin-top: 48px;
+}
+.mt-60 {
+  margin-top: 60px;
+}
+.mt-100 {
+  margin-top: 100px;
 }
 .ml-4 {
   margin-left: 4px;
@@ -1725,6 +1731,43 @@ select:before {
 }
 .more-pic-blue {
   background-color: rgba(0, 21, 72, .80);
+}
+.agent-image {
+  height: 300px;
+  width: 200px;
+}
+.hero {
+  height: 560px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+@media (max-width: 720px) {
+  .hero {
+    height: 320px;
+  }
+}
+.basic_copy {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.basic_copy .copy {
+  width: 638px;
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .basic_copy .copy {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 /*--------------------------------------------------------------
  # Infinite scroll
