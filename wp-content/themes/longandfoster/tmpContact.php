@@ -18,13 +18,31 @@ Template Name: Contact Page
 
 </div>
 
-<div class="mw-85 m-auto fx fx-col fx-align-center fx-justify-center pt-24 pb-48 t-center copy fc-dark-blue fs-18">
-  <?php echo get_field('hometown_team_copy'); ?>
+<div class="container contact-form m m-auto fx fx-justify-sa pb-4">
+
+  <div class="w-50 pa-4">
+    <label class="pb-4 fc-dark-blue fw-3 f-16">First & Last Name</label>
+    <input type="text" class="ht-48 bg-light-grey b-none w-100" />
+  </div>
+  <div class="w-50 pa-4">
+    <label class="pb-4 fc-dark-blue fw-3 f-16">Email</label>
+    <input type="text" class="ht-48 bg-light-grey b-none w-100" />
+  </div>
+
 </div>
 
-<div class="mw-85 m-auto fx fx-col fx-align-center fx-justify-center pt-24 pb-48 t-center copy fc-dark-blue fs-18">
-  <image src="<?php echo get_field('agency_image'); ?>" />
+<div class="container contact-form m m-auto fx fx-justify-sa pb-48 mt-16">
+
+  <div class="w-100 pa-4">
+    <label class="pb-4 fc-dark-blue fw-3 f-16">Ask a question, or send us a message.</label>
+    <textarea class="ht-120 bg-light-grey b-none w-100 mb-16"></textarea>
+    <a href="#" class="contact-submit" style="float:right">Submit</a>
+
+  </div>
+
 </div>
+
+
 
 <div class="mw-85 m-auto fx fx-col fx-align-center fx-justify-center pt-50">
   <div class="fs-18 fc-light-blue">Let's Chat</div>
@@ -55,7 +73,7 @@ Template Name: Contact Page
 
         $(".interested-btn").removeClass("bg-dark-red").removeClass("fc-white").addClass("fc-light-blue")
         $(this).addClass("bg-dark-red").addClass("fc-white").removeClass("bg-light-grey")
-        
+
       })
 
 

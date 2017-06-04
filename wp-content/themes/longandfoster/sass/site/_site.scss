@@ -443,7 +443,7 @@
 // BORDERS
 
 .b { border-width: 1px; }
-.b-none { border: none; }
+.b-none { border: none !important; }
 .b-none input { border: none; }
 .b-solid { border-style: solid;}
 
@@ -629,4 +629,25 @@ select:before {
       margin-right: auto;
     }
   }
+}
+
+
+.contact-form {
+  max-width: 800px;
+}
+
+
+.contact-submit {
+  height: 40px;
+width: 158px;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+text-decoration: none;
+font-size: 14px;
+text-transform: uppercase;
+background-color: #a40d2c;
+border: 1px solid #a40d2c;
+border-radius: 4px;
 }
