@@ -48,6 +48,10 @@
   padding-top: 50px;
 }
 
+.pb-50 {
+  padding-bottom: 50px;
+}
+
 @media (max-width: 900px) {
   .fxd-column-m {
     flex-direction: column;
@@ -185,6 +189,7 @@
 .ttu { text-transform: uppercase; }
 .td-none { text-decoration: none; }
 .lh-40 { line-height: 40px; }
+.t-italic { font-style: italic;}
 
 
 @media ( max-width: 600px) {
@@ -651,3 +656,11 @@ background-color: #a40d2c;
 border: 1px solid #a40d2c;
 border-radius: 4px;
 }
+
+
+.agent-testimonials {
+  background-color: #EBEDF1;
+}
+
+
+.testimonials { max-width: 600px; }
