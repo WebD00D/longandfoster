@@ -715,6 +715,13 @@ textarea {
   height: 100px;
   border: 1px solid black;
 }
+button {
+  outline: none;
+}
+input, textarea {
+  outline: none;
+  padding-left: 10px !important;
+}
 .container {
   margin: 0 auto;
   max-width: 1100px;
@@ -981,6 +988,9 @@ textarea {
 }
 .ht-120 {
   height: 120px;
+}
+.ht-200 {
+  height: 200px;
 }
 .ht-300p {
   height: 300px;
