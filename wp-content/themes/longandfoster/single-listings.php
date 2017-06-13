@@ -144,7 +144,7 @@
 
 
             $postobject = get_field('agent');
-            $url = get_permalink($postobject->ID);
+            $agent_url = get_permalink($postobject->ID);
             $name = $postobject->post_title;
             $featured_image = get_field('photo', $postobject->ID);
             $title = get_field('title', $postobject->ID);
@@ -153,18 +153,18 @@
 
 
 
-      <div class="ht-300p w-100 fx fx-col-m  fx-justify-center fx-align-center">
+      <div class="ht-300p ht-auto-m w-100 fx fx-col-m  fx-justify-center fx-align-center">
         <div class="w-40 w-100m pt-8 pb-8">
-          <img style="width: 100%; height: auto;max-height: 300px" src="<?php echo $featured_image; ?>" />
+          <img class="single-listing-agent-image"  src="<?php echo $featured_image; ?>" />
         </div>
-        <div class="w-60 w-100m pl-16 pt-8 pb-8">
+        <div class="w-60 w-100m pl-16 pl-0m pt-8 pb-8">
           <div class="fs-12 fc-light-blue">Listed By</div>
           <div class="fs-24 fc-dark-blue mt-0 mt-10 mb-12"><?php echo $name; ?></div>
           <div class="f-16 fc-dark-blue mb-24">
             3510 Old Halifax Road <Br />
             South Boston, VA
           </div>
-          <div class="bg-light-grey ht-48 fc-light-blue w-150p fx fx-align-center fx-justify-center br-50p">About</div>
+          <a href="<?php echo $agent_url; ?>" class="bg-light-grey ht-48 fc-light-blue w-150p fx fx-align-center fx-justify-center br-50p td-none">About</a>
           <div class="fs-12 fc-light-blue mt-20">Contact</div>
           <div class="fx w-100 ">
             <div class="fs-12 fc-dark-red mr-12">804.555.5555</div>

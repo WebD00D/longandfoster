@@ -102,6 +102,7 @@ input, textarea {
 
 @media (max-width: 900px) {
   .fx-justify-start-m { justify-content: flex-start; }
+  .fx-align-start-m  { align-items: flex-start;}
   .fx-col-m { flex-direction: column;}
 }
 
@@ -147,6 +148,10 @@ input, textarea {
 .mw-75 { width: 75% }
 .mw-85 { width: 85% }
 
+@media (max-width: 900px) {
+  .mw-100m { max-width: 100%;}
+}
+
 
 .w-10 { width: 10%; }
 .w-20 { width: 20%; }
@@ -181,7 +186,7 @@ input, textarea {
 
 @media ( max-width: 900px ) {
   .w-100m {
-    width: 100%;
+    width: 100% !important;
   }
 }
 
@@ -201,6 +206,15 @@ input, textarea {
 .lh-40 { line-height: 40px; }
 .t-italic { font-style: italic;}
 
+@media (max-width: 900px) {
+  .ht-auto-m { height: auto; }
+}
+
+
+
+.new-height {
+  height: 100px;
+}
 
 @media ( max-width: 600px) {
   .ht-70-m {
@@ -603,8 +617,8 @@ select:before {
 }
 
 .agent-image {
-  height: 300px;
-  width: 200px;
+  height: 500px;
+  width: auto;
 }
 
 
@@ -632,8 +646,6 @@ select:before {
   justify-content: center;
   align-items: center;
 
-
-
   .copy {
     width: 638px;
     text-align: center;
@@ -642,6 +654,12 @@ select:before {
       width: 80%;
       margin-left: auto;
       margin-right: auto;
+    }
+  }
+
+  &_m {
+    @media(max-width: 900px) {
+      margin-left: 0px !important;
     }
   }
 }
@@ -674,3 +692,9 @@ border-radius: 4px;
 
 
 .testimonials { max-width: 600px; }
+
+
+.single-listing-agent-image {
+  max-height: 300px;
+  width: auto;
+}

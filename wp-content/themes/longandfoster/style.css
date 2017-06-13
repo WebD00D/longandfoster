@@ -816,6 +816,9 @@ input, textarea {
   .fx-justify-start-m {
     justify-content: flex-start;
   }
+  .fx-align-start-m {
+    align-items: flex-start;
+  }
   .fx-col-m {
     flex-direction: column;
   }
@@ -895,6 +898,11 @@ input, textarea {
 .mw-85 {
   width: 85%;
 }
+@media (max-width: 900px) {
+  .mw-100m {
+    max-width: 100%;
+  }
+}
 .w-10 {
   width: 10%;
 }
@@ -968,7 +976,7 @@ input, textarea {
 }
 @media (max-width: 900px) {
   .w-100m {
-    width: 100%;
+    width: 100% !important;
   }
 }
 .ht-2 {
@@ -1006,6 +1014,14 @@ input, textarea {
 }
 .t-italic {
   font-style: italic;
+}
+@media (max-width: 900px) {
+  .ht-auto-m {
+    height: auto;
+  }
+}
+.new-height {
+  height: 100px;
 }
 @media (max-width: 600px) {
   .ht-70-m {
@@ -1749,8 +1765,8 @@ select:before {
   background-color: rgba(0, 21, 72, .80);
 }
 .agent-image {
-  height: 300px;
-  width: 200px;
+  height: 500px;
+  width: auto;
 }
 .hero {
   height: 560px;
@@ -1785,6 +1801,11 @@ select:before {
     margin-right: auto;
   }
 }
+@media (max-width: 900px) {
+  .basic_copy_m {
+    margin-left: 0px !important;
+  }
+}
 .contact-form {
   max-width: 800px;
 }
@@ -1807,6 +1828,10 @@ select:before {
 }
 .testimonials {
   max-width: 600px;
+}
+.single-listing-agent-image {
+  max-height: 300px;
+  width: auto;
 }
 /*--------------------------------------------------------------
  # Infinite scroll

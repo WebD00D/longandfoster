@@ -30,31 +30,29 @@ $content = get_field('bio', $postID);
 </div>
 
 
-<div class="mw-85 m-auto fx fx-col fx-align-center">
-  <div class="basic_copy" >
+<div class="mw-85  mw-100m  m-auto fx fx-col fx-align-center">
+  <div class="basic_copy basic_copy_m" >
 
-    <div class="copy fc-dark-blue fs-18 t-left" style="text-align: left">
+    <div class="copy fc-dark-blue fs-18 t-left basic_copy_m w-100m" style="text-align: left">
       <?php echo $short_description; ?>
     </div>
 
   </div>
 </div>
 
-<div class="mw-85 m-auto fx fx-col fx-align-center pb-50">
-  <div class="basic_copy" >
+<div class="mw-85  m-auto fx fx-col fx-align-center pb-50">
+  <div class="basic_copy  " >
 
-    <div class="copy fc-dark-blue fs-18 t-left" style="text-align: left">
+    <div class="copy fc-dark-blue fs-18 t-left w-100m basic_copy_m w-100m" style="text-align: left">
       <?php echo $content ?>
     </div>
 
   </div>
 </div>
 
-<div class="mw-85 m-auto fx fx-col fx-align-center pb-50">
-  <div class="basic_copy" >
-
-
-    <div class="copy fc-dark-blue fs-18 t-left" style="text-align: left">
+<div class="mw-85 m-auto fx fx-col fx-align-center fx-align-start-m pb-50">
+  <div class="basic_copy basic_copy_m" >
+    <div class="copy fc-dark-blue fs-18 t-left w-100m" style="text-align: left">
       Contact <?php echo get_the_title($postID); ?><Br />
       <?php echo $contact ?>
     </div>
