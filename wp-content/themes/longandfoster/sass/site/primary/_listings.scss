@@ -3,10 +3,14 @@
 //   justify-content: space-around;
 // }
 
+
+
 .listing {
 
   height: 320px;
-  width: 30%;
+  flex: 1;
+  flex-basis: 300px;
+  max-width: 300px;
 
   border-radius: 4px;
   background-color: white;

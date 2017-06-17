@@ -9,6 +9,16 @@ textarea {
 	line-height: $font__line-height-body;
 }
 
+.t-serif {
+	font-family: 'Noto Serif', serif;
+}
+
+.t-sans {
+	font-family: 'Noto Sans', sans-serif;
+}
+
+
+
 @import "headings";
 
 @import "copy";

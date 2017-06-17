@@ -33,13 +33,13 @@
 
 				<div class="w-33 w-100m">
 					<div class="mw-75 mlra">
-						<div class="fs-14 fc-light-blue fw-3 w-100">Address</div>
-						<div class="mt-16 fc-dark-blue">
+						<div class="fs-14 fc-light-blue fw-3 w-100 t-sans">Address</div>
+						<div class="mt-16 fc-dark-blue t-serif">
 							3510 Old Halifax Rd, <br />
 							South Boston, VA 24592
 						</div>
-						<div class="fs-14 fc-light-blue fw-3 w-100 mt-24">Hours</div>
-						<div class="mt-16 fc-dark-blue">
+						<div class="fs-14 fc-light-blue fw-3 w-100 mt-24 t-sans">Hours</div>
+						<div class="mt-16 fc-dark-blue t-serif">
 							Monday-Friday: 9am-6pm <br />
 							Saturday-Sunday: 10am-5pm
 						</div>
@@ -48,8 +48,8 @@
 
 				<div class="w-33 w-100m">
 					<div class="mw-75 mlra">
-						<div class="fs-14 fc-light-blue fw-3 w-100 mt-24-sm">Contact</div>
-						<div class="mt-16 fc-dark-blue">
+						<div class="fs-14 fc-light-blue fw-3 w-100 mt-24-sm t-sans">Contact</div>
+						<div class="mt-16 fc-dark-blue t-serif">
 							o. 434 - 575 - 1100 <br />
 							c. 434 - 572 - 0150 <br />
 							f.  434 - 575 - 1110 <br />
@@ -60,21 +60,18 @@
 
 				<div class="w-33 w-100m">
 					<div class="mw-75 mlra">
-						<div class="fs-14 fc-light-blue fw-3 w-100 ttu mt-24-sm">Site Navigation</div>
+						<div class="fs-14 fc-light-blue fw-3 w-100  mt-24-sm t-sans">Site Navigation</div>
 						<div class="mt-16 ">
-							<a href="/" class="db td-none fc-dark-blue mb-4">About</a>
-							<a href="/" class="db td-none fc-dark-blue mb-4">Listings</a>
-							<a href="/" class="db td-none fc-dark-blue mb-4">Community</a>
-							<a href="/" class="db td-none fc-dark-blue mb-4">Agents</a>
-							<a href="/" class="db td-none fc-dark-blue mb-4">Testimonials</a>
+							<a  href="<?php echo get_page_link( get_page_by_title( 'About' )->ID ); ?>" class="db td-none fc-dark-blue mb-4 t-serif">About</a>
+							<a href="<?php echo get_page_link( get_page_by_title( 'Real Estate' )->ID ); ?>" class="db td-none fc-dark-blue mb-4 t-serif">Listings</a>
+							<a href="<?php echo get_page_link( get_page_by_title( 'Community' )->ID ); ?>" class="db td-none fc-dark-blue mb-4 t-serif">Community</a>
 						</div>
 					</div>
 				</div>
 			</div>
 
-
 				<div class="mw-75 mlra ht-100 pt-24  fx fx-align-center fx-justify-center fx-justify-start-m">
-					<div class="fc-dark-blue">Copyright © 2017 Long & Foster</div>
+					<div class="fc-dark-blue t-serif">Copyright © 2017 Long & Foster</div>
 				</div>
 
 

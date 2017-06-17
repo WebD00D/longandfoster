@@ -16,6 +16,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.css" rel="stylesheet">
 <script src="https://use.fontawesome.com/f9a957d2bf.js"></script>
 
@@ -36,18 +37,17 @@
 		<div class="w-100 fx fx-justify-sb ml-48 mr-48 ml-16-m mr-16-m">
 
 			<div class="logo__container">
-				<a href="/" class="logo"><img src="<?php echo get_template_directory_uri() ?>/images/Logo@2x.png" /></a>
+				<a href="<?php echo get_page_link( get_page_by_title( 'Home Page' )->ID ); ?>" class="logo"><img src="<?php echo get_template_directory_uri() ?>/images/Logo@2x.png" /></a>
 			</div>
 
 			<div class="navbar__page-links d-none-m">
-				<a href="#">About</a>
-				<a href="#">Agents</a>
-				<a href="/listings">Listings</a>
-				<a href="#">Community</a>
+				<a class="t-sans" href="<?php echo get_page_link( get_page_by_title( 'About' )->ID ); ?>">About</a>
+				<a class="t-sans" href="<?php echo get_page_link( get_page_by_title( 'Real Estate' )->ID ); ?>">Listings</a>
+				<a class="t-sans" href="<?php echo get_page_link( get_page_by_title( 'Community' )->ID ); ?>">Community</a>
 			</div>
 
 			<div class="navbar__contact d-none-m">
-				<a href="#">Contact</a>
+				<a class="t-sans" href="<?php echo get_page_link( get_page_by_title( 'Contact' )->ID ); ?>">Contact</a>
 			</div>
 
 			<div class="d-none-dt fx fx-align-center">
@@ -61,15 +61,15 @@
 
 	<div id="js_mobile-menu" class="fixed top-0 left-0 bottom-0 right-0 bg--white f pb-48 overflow-y-scroll d-none">
 		<div class="d-none-dt fx fx-align-center fx-justify-center ht-75 b bb b--light-grey" ><a id="js_mobile-close-button" href="#"><img style="height: 20px;" src="<?php echo get_template_directory_uri() ?>/images/mobile-close.png" /></a></div>
-		<a href="#" class="w-100 fx fx-justify-center fx-align-center ht-75 td-none fc-dark-blue">Home</a>
+		<a  href="#" class="w-100 fx fx-justify-center fx-align-center ht-75 td-none fc-dark-blue t-sans">Home</a>
 		<div class="w-25p ht-2 bg-dark-red mlra"></div>
-		<a href="#" class="w-100 fx fx-justify-center fx-align-center ht-75 td-none fc-dark-blue">About</a>
+		<a href="#" class="w-100 fx fx-justify-center fx-align-center ht-75 td-none fc-dark-blue t-sans">About</a>
 		<div class="w-25p ht-2 bg-dark-red mlra"></div>
-		<a href="#" class="w-100 fx fx-justify-center fx-align-center ht-75 td-none fc-dark-blue">Agents</a>
+		<a href="#" class="w-100 fx fx-justify-center fx-align-center ht-75 td-none fc-dark-blue t-sans">Agents</a>
 		<div class="w-25p ht-2 bg-dark-red mlra"></div>
-		<a href="#" class="w-100 fx fx-justify-center fx-align-center ht-75 td-none fc-dark-blue">Listings</a>
+		<a href="#" class="w-100 fx fx-justify-center fx-align-center ht-75 td-none fc-dark-blue t-sans">Listings</a>
 		<div class="w-25p ht-2 bg-dark-red mlra"></div>
-		<a href="#" class="w-100 fx fx-justify-center fx-align-center ht-75 td-none fc-dark-blue">Community</a>
+		<a href="#" class="w-100 fx fx-justify-center fx-align-center ht-75 td-none fc-dark-blue t-sans">Community</a>
 		<div class="w-25p ht-2 bg-dark-red mlra mb-24"></div>
 	  <a href="/" class="logo fx fx-align-center fx-justify-center ht-75"><img style="height:25px;" src="<?php echo get_template_directory_uri() ?>/images/Logo@2x.png"></a>
 	</div>

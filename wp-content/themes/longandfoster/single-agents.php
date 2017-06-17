@@ -20,8 +20,8 @@ $content = get_field('bio', $postID);
 
 
 <div class="mw-85 m-auto fx fx-col fx-align-center fx-justify-center pt-50">
-  <div class="fs-18 fc-light-blue"><?php echo $title; ?></div>
-  <div class="fs-64 fs-40-m lh-44-m mb-16-m mt-16-m fc-dark-blue t-center"><?php echo get_the_title($postID); ?></div>
+  <div class="fs-18 fc-light-blue t-sans"><?php echo $title; ?></div>
+  <div class="fs-64 fs-40-m lh-44-m mb-16-m mt-16-m fc-dark-blue t-center t-serif"><?php echo get_the_title($postID); ?></div>
   <div class="bg-dark-red hz-separator"></div>
 </div>
 
@@ -33,7 +33,7 @@ $content = get_field('bio', $postID);
 <div class="mw-85  mw-100m  m-auto fx fx-col fx-align-center">
   <div class="basic_copy basic_copy_m" >
 
-    <div class="copy fc-dark-blue fs-18 t-left basic_copy_m w-100m" style="text-align: left">
+    <div class="copy fc-dark-blue fs-18 t-left basic_copy_m w-100m t-serif" style="text-align: left">
       <?php echo $short_description; ?>
     </div>
 
@@ -43,7 +43,7 @@ $content = get_field('bio', $postID);
 <div class="mw-85  m-auto fx fx-col fx-align-center pb-50">
   <div class="basic_copy  " >
 
-    <div class="copy fc-dark-blue fs-18 t-left w-100m basic_copy_m w-100m" style="text-align: left">
+    <div class="copy fc-dark-blue fs-18 t-left w-100m basic_copy_m w-100m t-sans" style="text-align: left">
       <?php echo $content ?>
     </div>
 
@@ -52,7 +52,7 @@ $content = get_field('bio', $postID);
 
 <div class="mw-85 m-auto fx fx-col fx-align-center fx-align-start-m pb-50">
   <div class="basic_copy basic_copy_m" >
-    <div class="copy fc-dark-blue fs-18 t-left w-100m" style="text-align: left">
+    <div class="copy fc-dark-blue fs-18 t-left w-100m t-serif" style="text-align: left">
       Contact <?php echo get_the_title($postID); ?><Br />
       <?php echo $contact ?>
     </div>
@@ -63,8 +63,8 @@ $content = get_field('bio', $postID);
 <div class="agent-testimonials pt-64 pb-100">
   <div class="container">
     <div class="mw-85 m-auto ">
-        <div class="fs-18 fc-light-blue t-center">What others are saying about</div>
-        <div class="fs-64 fs-40-m lh-44-m mb-16-m mt-16-m fc-dark-blue t-center"> <?php echo get_the_title($postID); ?></div>
+        <div class="fs-18 fc-light-blue t-center t-sans">What others are saying about</div>
+        <div class="fs-64 fs-40-m lh-44-m mb-16-m mt-16-m fc-dark-blue t-center t-serif"> <?php echo get_the_title($postID); ?></div>
         <div class="fx fx-justify-center fx-align-center">
           <div class="bg-dark-red hz-separator"></div>
         </div>
@@ -74,8 +74,8 @@ $content = get_field('bio', $postID);
               if( have_rows('testimonials') ):
                   while ( have_rows('testimonials') ) : the_row(); ?>
                   <div class="t-center pt-24">
-                    <div class="t-italic fc-dark-blue fw-1" ><?php echo get_sub_field('testimonial'); ?></div>
-                    <div class="f-18 fc-dark-blue"><?php echo get_sub_field('given_by'); ?></div>
+                    <div class="t-italic fc-dark-blue fw-1 t-sans" ><?php echo get_sub_field('testimonial'); ?></div>
+                    <div class="f-18 fc-dark-blue t-serif"><?php echo get_sub_field('given_by'); ?></div>
                   </div>
               <?php  endwhile;
               else :
@@ -94,8 +94,8 @@ $content = get_field('bio', $postID);
 
   <div class="container">
       <div class="mw-85 m-auto">
-        <div class="fs-18 fc-light-blue t-center">Let's Chat</div>
-        <div class="fs-64 fs-40-m lh-44-m mb-16-m mt-16-m fc-dark-blue t-center"> Find Me Here</div>
+        <div class="fs-18 fc-light-blue t-center t-sans">Let's Chat</div>
+        <div class="fs-64 fs-40-m lh-44-m mb-16-m mt-16-m fc-dark-blue t-center t-serif"> Find Me Here</div>
         <div class="fx fx-justify-center fx-align-center">
           <div class="bg-dark-red hz-separator"></div>
         </div>
@@ -116,11 +116,10 @@ $content = get_field('bio', $postID);
 
   <div class="container">
       <div class="m-auto t-center">
-        <div class="fc-dark-blue f-24"><?php echo get_the_title($postID); ?>'s Featured Properties</div>
+        <div class="fc-dark-blue f-24 t-serif"><?php echo get_the_title($postID); ?>'s Featured Properties</div>
         <div class="homepage__featured">
           <div class="container">
             <div class="listings">
-
 
               <?php
                   // check if the repeater field has rows of data
@@ -135,24 +134,25 @@ $content = get_field('bio', $postID);
                       $title = $postobject->post_title;
                       $featured_image = get_field('featured_image', $postobject->ID);
                       $price = get_field('price', $postobject->ID);
-                      $listing_type = get_field('type_of_listing', $postobject->ID);
+                      $listing_type = wp_get_post_terms($postobject->ID, 'listing_types');
                       $bedrooms = get_field('bedrooms', $postobject->ID);
                       $bathrooms = get_field('bathrooms', $postobject->ID);
                       $square_footage = get_field('square_footage', $postobject->ID);
-
-
-
                       ?>
 
-
                       <a href="<?php echo $url; ?>" class="listing">
-                        <div class="listing__bg" style="background-image:url(<?php echo $featured_image; ?>);background-position:center;background-size:cover"></div>
-                        <div class="listing__info fx-col">
-                          <div class="fs-12 fc-light-blue"><?php echo $listing_type->name; ?></div>
-                          <div class="fs-16 fc-dark-blue"><?php echo $title; ?></div>
-                          <div class="fs-18 fc-dark-red">$<?php echo number_format($price); ?></div>
+                        <div class="listing__bg relative" style="background-image:url(<?php echo $featured_image; ?>);background-position:center;background-size:cover">
+                          <?php
+                          if ( has_term( 'new', 'listing_types', $postobject->ID ) ) { ?>
+                            <div class="absolute pl-8 pr-8 pt-4 pb-4 bg-dark-red fc-white fw-1 t-sans t-center f-12" style="width: 75px; right: 0; bottom:0;">NEW!</div>
+                            <?php } ?>
+                        </div>
+                        <div class="listing__info fx-col" style="text-align: left">
+                          <div class="fs-12 fc-light-blue t-sans"><?php echo $listing_type[0]->name; ?></div>
+                          <div class="fs-16 fc-dark-blue t-serif"><?php echo $title; ?></div>
+                          <div class="fs-18 fc-dark-red t-sans">$<?php echo number_format($price); ?></div>
                           <div class="fx-row as-sb">
-                            <span class="fs-14 fc-light-blue"><?php echo $square_footage; ?> sq/ft</span>
+                            <span class="fs-14 fc-light-blue t-sans"><?php echo $square_footage; ?> sq/ft</span>
                             <span class="fx">
                               <span class="fs-16 fc-dark-blue ml-5 mr-5"><img style="height:14px;" src="<?php echo get_template_directory_uri() ?>/images/bed.png" /> <?php echo $bedrooms; ?></span>
                               <span class="fs-16 fc-dark-blue ml-5 mr-5"><img style="height:14px;" src="<?php echo get_template_directory_uri() ?>/images/bath.png" /> <?php echo $bathrooms; ?></span>
@@ -174,7 +174,7 @@ $content = get_field('bio', $postID);
             </div>
 
             <div class="fx-row fx-center pt-50">
-              <a href="/realestate" class="btn-lg">See all Listings</a>
+              <a href="/realestate" class="btn-lg t-sans">See all Listings</a>
             </div>
 
           </div>

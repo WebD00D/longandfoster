@@ -288,6 +288,12 @@ body, button, input, select, textarea {
   font-size: 1rem;
   line-height: 1.5;
 }
+.t-serif {
+  font-family: 'Noto Serif', serif;
+}
+.t-sans {
+  font-family: 'Noto Sans', sans-serif;
+}
 h1, h2, h3, h4, h5, h6 {
   clear: both;
   color: red;
@@ -679,7 +685,9 @@ textarea {
 }
 .listing {
   height: 320px;
-  width: 30%;
+  flex: 1;
+  flex-basis: 300px;
+  max-width: 300px;
   border-radius: 4px;
   background-color: white;
   transition: 0.2s ease;
@@ -1765,7 +1773,7 @@ select:before {
   background-color: rgba(0, 21, 72, .80);
 }
 .agent-image {
-  height: 500px;
+  height: 300px;
   width: auto;
 }
 .hero {
@@ -1826,12 +1834,47 @@ select:before {
 .agent-testimonials {
   background-color: #ebedf1;
 }
+.learn-more-btn {
+  height: 40px;
+  width: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: #a40d2c;
+  border: 1px solid #a40d2c;
+  border-radius: 4px;
+}
 .testimonials {
   max-width: 600px;
 }
 .single-listing-agent-image {
   max-height: 300px;
   width: auto;
+}
+.big-hover {
+  transition: 0.2s ease;
+}
+.big-hover:hover {
+  cursor: pointer;
+  -webkit-box-shadow: -1px 2px 11px -2px rgba(0, 0, 0, 0.20);
+  -moz-box-shadow: -1px 2px 11px -2px rgba(0, 0, 0, 0.20);
+  box-shadow: -1px 2px 11px -2px rgba(0, 0, 0, 0.20);
+}
+@media (min-width: 900px) {
+  .big-hover:hover {
+    transform: scale(1.001);
+  }
+}
+.ease {
+  transition: 0.2s ease;
+}
+.listing-wrapper {
+  max-width: 1100px;
+  justify-content: center;
 }
 /*--------------------------------------------------------------
  # Infinite scroll
