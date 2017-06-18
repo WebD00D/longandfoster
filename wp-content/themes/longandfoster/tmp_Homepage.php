@@ -34,12 +34,9 @@ Template Name: Home Page
       <div class="fs-34 fc-dark-blue t-center mb-60 t-serif">Featured Listings</div>
       <div class="listings">
 
-
         <?php
-            // check if the repeater field has rows of data
-            if( have_rows('featured_properties') ):
 
-             	// loop through the rows of data
+            if( have_rows('featured_properties') ):
                 while ( have_rows('featured_properties') ) : the_row(); ?>
 
                 <?php
@@ -53,10 +50,7 @@ Template Name: Home Page
                 $bathrooms = get_field('bathrooms', $postobject->ID);
                 $square_footage = get_field('square_footage', $postobject->ID);
 
-
-
                 ?>
-
 
                 <a href="<?php echo $url; ?>" class="listing">
                   <div class="listing__bg relative" style="background-image:url(<?php echo $featured_image; ?>);background-position:center;background-size:cover">

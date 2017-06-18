@@ -41,9 +41,43 @@
 			</div>
 
 			<div class="navbar__page-links d-none-m">
-				<a class="t-sans" href="<?php echo get_page_link( get_page_by_title( 'About' )->ID ); ?>">About</a>
-				<a class="t-sans" href="<?php echo get_page_link( get_page_by_title( 'Real Estate' )->ID ); ?>">Listings</a>
-				<a class="t-sans" href="<?php echo get_page_link( get_page_by_title( 'Community' )->ID ); ?>">Community</a>
+				<a class="nav-link t-sans" href="<?php echo get_page_link( get_page_by_title( 'About' )->ID ); ?>">About</a>
+				<a class="nav-link t-sans" href="<?php echo get_page_link( get_page_by_title( 'Real Estate' )->ID ); ?>">Listings</a>
+				<div class="t-sans relative agent-link" href="#">
+
+					Agents
+
+					<div class="agent-menu bg-white absolute top-25 w-225px fx fx-col pt-12 pb-12 ">
+
+
+
+						<?php
+						$lastposts = get_posts( array(
+						    'posts_per_page' => -1,
+								'post_type'  => 'agents'
+						) );
+
+						if ( $lastposts ) {
+						    foreach ( $lastposts as $post ) :
+						        setup_postdata( $post ); ?>
+
+										<a href="<?php the_permalink(); ?>" class="t-sans pb-8 pt-8 tt-none pa-8 c-pointer fc-dark-red td-none">
+											<?php the_title(); ?>
+										</a>
+
+						    <?php
+						    endforeach;
+						    wp_reset_postdata();
+						}
+
+						?>
+
+
+					</div>
+
+
+				</div>
+				<a class="nav-link t-sans" href="<?php echo get_page_link( get_page_by_title( 'Community' )->ID ); ?>">Community</a>
 			</div>
 
 			<div class="navbar__contact d-none-m">
